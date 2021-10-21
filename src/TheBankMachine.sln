@@ -7,11 +7,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TheBankMachine.Tests", "The
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{072D535F-3FEE-47E3-A31B-5B6BC8184794}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheBankMachine.Domain", "TheBankMachine.Domain\TheBankMachine.Domain.csproj", "{A907F5CD-35BA-4DDB-A85D-32889C9BA1B8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TheBankMachine.Domain", "TheBankMachine.Domain\TheBankMachine.Domain.csproj", "{A907F5CD-35BA-4DDB-A85D-32889C9BA1B8}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{C11497AC-4844-4D95-915F-BD61899292A0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheBankMachine.Api", "TheBankMachine.Api\TheBankMachine.Api.csproj", "{3B213C92-F557-49FE-BA07-2966D8FCDBEA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TheBankMachine.Api", "TheBankMachine.Api\TheBankMachine.Api.csproj", "{3B213C92-F557-49FE-BA07-2966D8FCDBEA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{C72159C7-E718-4D8E-9559-B7BB2FBAB756}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheBankMachine.Infrastructure", "TheBankMachine.Infrastructure\TheBankMachine.Infrastructure.csproj", "{9F24691E-CACA-4403-BF05-4C38F0583ADC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,6 +35,10 @@ Global
 		{3B213C92-F557-49FE-BA07-2966D8FCDBEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3B213C92-F557-49FE-BA07-2966D8FCDBEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3B213C92-F557-49FE-BA07-2966D8FCDBEA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9F24691E-CACA-4403-BF05-4C38F0583ADC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F24691E-CACA-4403-BF05-4C38F0583ADC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F24691E-CACA-4403-BF05-4C38F0583ADC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F24691E-CACA-4403-BF05-4C38F0583ADC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -38,6 +46,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{A907F5CD-35BA-4DDB-A85D-32889C9BA1B8} = {072D535F-3FEE-47E3-A31B-5B6BC8184794}
 		{3B213C92-F557-49FE-BA07-2966D8FCDBEA} = {C11497AC-4844-4D95-915F-BD61899292A0}
+		{9F24691E-CACA-4403-BF05-4C38F0583ADC} = {C72159C7-E718-4D8E-9559-B7BB2FBAB756}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C8ED72B1-8E77-4515-BA43-D60DCF900064}

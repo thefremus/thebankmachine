@@ -25,4 +25,21 @@ We are going to be building an API for an ATM machine. Some rules:
 
 For all intents and purposes we can have an Account Entity to start off with. We can also have a Transaction entity related to the entity. The Account Entity can either have a running balance property or we can create a method to calculate the balance through the transactions. The Account Entity will also contain the PIN - the security is important but for now it will be plain text. Our goal is to get a basic set of functions going. Also security is a relatively complicated topic. 
 
+## EndPoints
+
+|Endpoint            |Description          |Method |Input Parameter |Result|
+|--------------------|---------------------|-------|----------------|------|
+|api/account/create  |Creates a new account|POST   |AccountViewModel|200OK |
+|api/account/deposit |Deposit money        |POST   |AccountViewModel|200OK |
+|api/account/withdraw|Withdraw money       |POST   |AccountViewModel|200OK |
+
+### AccountViewModel
+
+|Property     |Type  |
+|-------------|------|
+|Id           |int   |
+|AccountNumber|string|
+|PinCode      |string|
+|Balance      |decimal|
+
 

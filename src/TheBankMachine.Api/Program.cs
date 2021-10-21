@@ -1,4 +1,26 @@
+using MediatR;
+using Microsoft.EntityFrameworkCore;
+using TheBankMachine.Api.Application;
+using TheBankMachine.Domain.AggregatesModel.AccountAggregate;
+using TheBankMachine.Infrastructure;
+using TheBankMachine.Infrastructure.Repositories;
+
 var builder = WebApplication.CreateBuilder(args);
+var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+var optionsBuilder = new DbContextOptionsBuilder<TheBankMachineContext>();
+optionsBuilder.UseSqlite(connectionString, sqliteOptionsAction: sqliteOptions =>
+{
+    sqliteOptions.MigrationsAssembly("TheBankMachine.Api");
+});
+var ctx = new TheBankMachineContext(optionsBuilder.Options);
+builder.Services.AddDbContext<TheBankMachineContext>(x => { 
+    x.UseSqlite(connectionString, sqliteOptionsAction: sqliteOptions =>
+    {
+        sqliteOptions.MigrationsAssembly("TheBankMachine.Api");
+    });
+});
+builder.Services.AddScoped<IAccountRepository>(x => new AccountRepository(ctx));
+builder.Services.AddMediatR(typeof(AccountCreateCommandHandler));
 
 // Add services to the container.
 
@@ -16,7 +38,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-app.UseAuthorization();
+app.UseRouting();
+//app.UseAuthorization();
 
 app.MapControllers();
 

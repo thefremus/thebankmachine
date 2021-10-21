@@ -11,5 +11,6 @@ namespace TheBankMachine.Domain.AggregatesModel.AccountAggregate
     {
         AccountAggregate Add(AccountAggregate account);
         AccountAggregate Update(AccountAggregate account);
+        AccountAggregate Get(string accountNumber);
     }
 }
